@@ -1,4 +1,3 @@
-const { application } = require('express');
 const express = require('express');
 const bodyParser = require('body-parser');
 // Initialize Application
@@ -44,6 +43,6 @@ App.listen(
     Hostname,
     () => {
         console.log(`Server started on http://${Hostname}:${Port}`);
-        console.log(`Stop server with Crtl + C`); 
+        console.log(`Stop server with Ctrl + C`); 
     }
 )

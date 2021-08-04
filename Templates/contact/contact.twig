@@ -58,17 +58,21 @@
                             <div class="row">
                                 <div class="col-md-12 form-group">
                                     <input type="text" class="form-control" name="email" id="email" placeholder="Adresse email">
+                                    {% if formError.email %} <ul class ="error"><li>{{formError.email.message}}</li></ul>{% endif %}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 form-group">
                                     <input type="text" class="form-control" name="subject" id="email" placeholder="Objet">
+                                    {% if formError.subject %} <ul class="error"><li>{{formError.subject.message}}</li></ul>{% endif %}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 form-group">
                                     <textarea class="form-control" style="height:110px" name="message" id="message" cols="30" rows="25"
                                         placeholder="Write your message"></textarea>
+                                    {% if formError.message %} <ul class="error"><li>{{formError.message.message}}</li></ul>{% endif %}
+
                                 </div>
                             </div>
                             <div class="row">
